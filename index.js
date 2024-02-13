@@ -1,7 +1,7 @@
 //importing discord.js openAI and dotenv
 require('dotenv/config')
 const { Client, GuildMember } = require('discord.js');
-const { OpenAI} = require('openai'); //import client class
+const { OpenAI } = require('openai'); //import client class
 
 const client = new Client({
     intents: ['Guilds', 'GuildMembers', 'GuildMessages', 'MessageContent']

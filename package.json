@@ -12,6 +12,8 @@
   "dependencies": {
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.1",
-    "openai": "^4.27.0"
+    "openai": "^4.27.0",
+    "url-encode-decode": "^1.0.0",
+    "whatwg-url": "^14.0.0"
   }
 }
