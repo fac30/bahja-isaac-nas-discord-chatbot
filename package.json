@@ -1,7 +1,7 @@
 {
-  "name": "gpt-bot",
+  "name": "bahja-isaac-nas-discord-chatbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "discord bot project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,6 @@
   "dependencies": {
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.1",
-    "openai": "^4.27.0",
-    "url-encode-decode": "^1.0.0",
-    "whatwg-url": "^14.0.0"
+    "openai": "^4.27.0"
   }
 }
