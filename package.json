@@ -1,7 +1,7 @@
 {
-  "name": "gpt-bot",
+  "name": "bahja-isaac-nas-discord-chatbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "discord bot project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
