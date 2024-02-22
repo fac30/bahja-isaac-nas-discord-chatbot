@@ -1,9 +1,20 @@
+require('dotenv/config');
 const { OpenAI } = require("openai");
 const { client } = require("./bot");
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_KEY,
 });
+
+// let openai;
+
+// if (process.env.OPENAI_API_KEY) {
+//   openai = new OpenAI({
+//     apiKey: process.env.OPENAI_API_KEY,
+//   });
+// } else {
+//   console.error("OPENAI_API_KEY is missing - Please set the environment variable.");
+// }
 
 const IGNORE_PREFIX = "!";
 // the channel the bot to respond in
@@ -92,4 +103,4 @@ async function handleMessage(client, message) {
   }
 }
 
-module.exports = { handleMessage };
+module.exports = { handleMessage, openai };
