@@ -8,8 +8,7 @@ describe('Discord Bot Tests', () => {
   test('should emit the "ready" event', (done) => {
     // Assuming your bot emits the "ready" event when it's ready
     client.once('ready', () => {
-      expect(true).toBeTruthy();
-      // assert.ok(true);  
+      expect(true).toBeTruthy(); 
       done();
     });
   });
