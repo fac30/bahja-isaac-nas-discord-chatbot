@@ -1,20 +1,9 @@
 require('dotenv/config');
 const { OpenAI } = require("openai");
-const { client } = require("./bot");
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_KEY,
 });
-
-// let openai;
-
-// if (process.env.OPENAI_API_KEY) {
-//   openai = new OpenAI({
-//     apiKey: process.env.OPENAI_API_KEY,
-//   });
-// } else {
-//   console.error("OPENAI_API_KEY is missing - Please set the environment variable.");
-// }
 
 const IGNORE_PREFIX = "!";
 // the channel the bot to respond in
@@ -48,7 +37,7 @@ async function handleMessage(client, message) {
   let prevMessages = await message.channel.messages.fetch({ limit: 10 });
   // correct order
   prevMessages.reverse();
-
+  
   // loop through each prev messages to push to the convo array
   prevMessages.forEach((msg) => {
     // if the msg auth was a bot and the id does not match our bot id then we'll ignore the msg.
@@ -103,4 +92,4 @@ async function handleMessage(client, message) {
   }
 }
 
-module.exports = { handleMessage, openai };
+module.exports = { handleMessage };
