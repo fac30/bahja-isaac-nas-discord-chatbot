@@ -1,6 +1,5 @@
 require('dotenv/config');
 const { OpenAI } = require("openai");
-// const { client } = require("./bot");
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_KEY,
@@ -11,10 +10,6 @@ const IGNORE_PREFIX = "!";
 const CHANNELS = ["1204934204450676859", "1205948661310292040"];
 
 async function handleMessage(client, message) {
-  // console.log(client.user.bot);
-  // console.log('');
-  // console.log(message.author);
-  // console.log(message.author.username);
   if (message.author.bot) return;
   if (message.content.startsWith(IGNORE_PREFIX)) return;
   // if message doesn't include channel ids and message doesnt inclue ping to bot then we will ignore the message.
@@ -43,8 +38,6 @@ async function handleMessage(client, message) {
   // correct order
   prevMessages.reverse();
   
-
-
   // loop through each prev messages to push to the convo array
   prevMessages.forEach((msg) => {
     // if the msg auth was a bot and the id does not match our bot id then we'll ignore the msg.
