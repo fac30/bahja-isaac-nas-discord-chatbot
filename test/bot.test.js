@@ -22,11 +22,16 @@ describe('Discord Bot Tests', () => {
     const actual = Object.keys(client);
     expect(actual).toMatchObject(clientKeyObject);
   });
+
+  it('checks that the client key in not undefined', () => {
+    const actual = Object.keys(client);
+    expect(actual).not.toBeUndefined();
+  });
 });
 
 describe('Discord Bot clientKeyObject', () => {
   it('should fail to match and return an error', () => {
     const actual = Object.keys(client);
     expect(actual).not.toBe(failClientKeyObject);
-  })
+  });
 })
