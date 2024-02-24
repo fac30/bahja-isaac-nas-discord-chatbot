@@ -35,6 +35,7 @@ async function handleMessage(client, message) {
 
   // will fetch last 10 messages from the channel
   let prevMessages = await message.channel.messages.fetch({ limit: 10 });
+
   // correct order
   prevMessages.reverse();
   
