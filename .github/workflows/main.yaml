@@ -15,9 +15,8 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
         script: |
-            cd bahja-isaac-nas-discord-chatbot
+            cd https://github.com/fac30/bahja-isaac-nas-discord-chatbot
             git pull
             npm i
-            node index.js
-            # pm2 stop chatbot
-            # pm2 start index.js --name chatbot
+            pm2 stop chatbot
+            pm2 start index.js --name chatbot
