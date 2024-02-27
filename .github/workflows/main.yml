@@ -1,22 +1,37 @@
-name: remote ssh command
+name: Execute Remote SSH Commands
+
 on:
   push:
-    branches: [ main ]
-jobs:
+    branches: [main]
 
-  build:
-    name: Build
+jobs:
+  execute-commands:
+    name: Execute Commands
     runs-on: ubuntu-latest
+
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
-        script: |
-            cd bahja-isaac-nas-discord-chatbot
-            git pull
-            npm i
-            pm2 stop chatbot
-            pm2 start index.js --name chatbot
+    
+name: Checkout Repository
+    uses: actions/checkout@v2
+
+    
+name: Execute SSH Commands
+    uses: appleboy/ssh-action@v1.0.3
+    with:
+      HOST: ${{ secrets.HOST }}
+      USERNAME: ${{ secrets.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      script: |
+        echo "Starting script execution..."
+        if [ -d "bahja-isaac-nas-discord-chatbot" ]; then
+          cd bahja-isaac-nas-discord-chatbot || exit 1
+        else
+          echo "Error: Directory 'bahja-isaac-nas-discord-chatbot' not found."
+          exit 1
+        fi
+        git pull
+        npm install
+        pm2 stop chatbot
+        pm2 start index.js --name chatbot
+
+        echo "Script execution completed successfully." 
