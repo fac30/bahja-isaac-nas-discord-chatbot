@@ -15,7 +15,7 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
         script: |
-            # cd bahja-isaac-nas-discord-chatbot
+            cd fac30/bahja-isaac-nas-discord-chatbot
             git pull
             npm i
             pm2 stop chatbot
