@@ -14,7 +14,7 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
-        script: node index.js
+        script: pwd
         # |
         #     cd bahja-isaac-nas-discord-chatbot
         #     git pull
