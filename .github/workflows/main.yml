@@ -2,7 +2,7 @@ name: Execute Remote SSH Commands
 
 on:
   push:
-    branches: [main]
+    branches: [yml-update]
 
 jobs:
   execute-commands:
@@ -22,13 +22,14 @@ name: Execute SSH Commands
       USERNAME: ${{ secrets.USERNAME }}
       PASSWORD: ${{ secrets.PASSWORD }}
       script: |
-        echo "Starting script execution..."
-        if [ -d "bahja-isaac-nas-discord-chatbot" ]; then
-          cd bahja-isaac-nas-discord-chatbot || exit 1
-        else
-          echo "Error: Directory 'bahja-isaac-nas-discord-chatbot' not found."
-          exit 1
-        fi
+         cd bahja-isaac-nas-discord-chatbot
+        # echo "Starting script execution..."
+        # if [ -d "bahja-isaac-nas-discord-chatbot" ]; then
+        #   cd bahja-isaac-nas-discord-chatbot || exit 1
+        # else
+        #   echo "Error: Directory 'bahja-isaac-nas-discord-chatbot' not found."
+        #   exit 1
+        # fi
         git pull
         npm install
         pm2 stop chatbot
