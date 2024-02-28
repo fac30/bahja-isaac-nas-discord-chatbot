@@ -11,9 +11,10 @@ jobs:
 
     steps:
       
-      - name: Checkout Repository
-      
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          path: some-custom-directory
+
       
             
       - name: Debugging - List Contents of Current Directory
