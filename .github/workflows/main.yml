@@ -20,5 +20,6 @@ jobs:
               cd bahja-isaac-nas-discord-chatbot
               git pull
               npm i
-              pm2 stop index.js
-              pm2 start index.js --name chatbot
+              nohup node index.js
+              # pm2 stop index.js
+              # pm2 start index.js --name chatbot
