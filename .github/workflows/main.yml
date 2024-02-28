@@ -34,7 +34,8 @@ jobs:
           script: |
             # Logging start of script execution
             # echo "Starting script execution..."
-            cd bahja-isaac-nas-discord-chatbot
+            cd /home/runner/work/bahja-isaac-nas-discord-chatbot/bahja-isaac-nas-discord-chatbot || exit 1
+
 
           
             #       # Navigate to the directory
