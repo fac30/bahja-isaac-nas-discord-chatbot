@@ -22,7 +22,7 @@ To install this project on your local machine please follow these steps:
 2. Create a bot on [Discord Developers](https://discord.com/developers/applications).
 3. Assign the permissions you want the bot to have (ensure you select `bot` and `applications.commands`) and generate a URL
 4. Invite your bot to the server you manage by pasting the generated link
-5. Copy the Discord Bots ServerID by right clicking on the server.
+5. Copy the Discord Bots 'Channel ID' by right clicking on general in the server menu and adding the Channel ID to the messageHandler.js file, in the Channels array around Line 10.
 6. Clone the repo
    ```sh
    git clone https://github.com/fac30/bahja-isaac-nas-discord-chatbot.git
