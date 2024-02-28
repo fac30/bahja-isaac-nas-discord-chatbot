@@ -33,7 +33,9 @@ jobs:
           script: |
             # Logging start of script execution
             echo "Starting script execution..."
-            cd bahja-isaac-nas-discord-chatbot/bahja-isaac-nas-discord-chatbot
+            cd bahja-isaac-nas-discord-chatbot || exit 1
+
+            # cd bahja-isaac-nas-discord-chatbot/bahja-isaac-nas-discord-chatbot
                   # # Navigate to the directory
                   # if [ -d "bahja-isaac-nas-discord-chatbot" ]; then
                   #   cd bahja-isaac-nas-discord-chatbot || exit 1
