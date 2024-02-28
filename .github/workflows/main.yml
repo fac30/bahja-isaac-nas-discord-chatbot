@@ -32,19 +32,11 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           script: |
-            # Logging start of script execution
-            # echo "Starting script execution..."
+          
             cd /home/runner/work/bahja-isaac-nas-discord-chatbot/bahja-isaac-nas-discord-chatbot || exit 1
 
 
           
-            #       # Navigate to the directory
-            #       if [ -d "bahja-isaac-nas-discord-chatbot" ]; then
-            #         cd bahja-isaac-nas-discord-chatbot || exit 1
-            #       else
-            #         echo "Error: Directory 'bahja-isaac-nas-discord-chatbot' not found."
-            #         exit 1
-            #       fi
       
                   # Pull latest changes from Git
                   git pull
@@ -58,5 +50,4 @@ jobs:
                   # Start chatbot
                   pm2 start index.js --name chatbot
       
-                  # Logging completion of script execution
-                  echo "Script execution completed successfully."
+                  
