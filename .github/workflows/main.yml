@@ -16,9 +16,9 @@ jobs:
           HOST: ${{ secrets.HOST }}
           PASSWORD: ${{ secrets.PASSWORD }}
           script: |
-            cd bahja-isaac-nas-discord-chatbot
-            git pull
-            npm i
-            node index.js
+             ls -la /path/to/your/directory 
+            # cd bahja-isaac-nas-discord-chatbot
+            # git pull
+            # npm i
             # pm2 stop chatbot
             # pm2 start index.js --name chatbot
