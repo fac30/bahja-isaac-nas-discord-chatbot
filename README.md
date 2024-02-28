@@ -50,3 +50,4 @@ We also used the following resources to understand how to use OpenAI's API and D
 
 * Discord.js [official documentation](https://discordjs.guide/#before-you-begin)
 * OpenAI [API documentation](https://platform.openai.com/docs/introduction)
+ 
