@@ -12,8 +12,8 @@ jobs:
     steps:
       
       - uses: actions/checkout@v2
-        with:
-          path: bahja-isaac-nas-discord-chatbot
+        # with:
+          # path: bahja-isaac-nas-discord-chatbot
 
       
             
