@@ -8,8 +8,22 @@ jobs:
   execute-commands:
     name: Execute Commands
     runs-on: ubuntu-latest
-    
+
     steps:
+      
+      - name: Checkout Repository
+      
+        uses: actions/checkout@v2
+      
+            
+      - name: Debugging - List Contents of Current Directory
+        run: ls -la
+      
+            
+      - name: Debugging - Print Working Directory
+        run: pwd
+      
+            
       - name: Execute SSH Commands
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -17,12 +31,28 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           script: |
-              cd bahja-isaac-nas-discord-chatbot/bahja-isaac-nas-discord-chatbot
-              git pull
-              npm install
-              pm2 stop chatbot
-              # Start chatbot
-              pm2 start index.js --name chatbot
-            
-              # Logging completion of script execution
-              echo "Script execution completed successfully."
+            # Logging start of script execution
+            echo "Starting script execution..."
+      
+                  # Navigate to the directory
+                  if [ -d "bahja-isaac-nas-discord-chatbot" ]; then
+                    cd bahja-isaac-nas-discord-chatbot || exit 1
+                  else
+                    echo "Error: Directory 'bahja-isaac-nas-discord-chatbot' not found."
+                    exit 1
+                  fi
+      
+                  # Pull latest changes from Git
+                  git pull
+      
+                  # Install npm dependencies
+                  npm install
+      
+                  # Stop chatbot if running
+                  pm2 stop chatbot
+      
+                  # Start chatbot
+                  pm2 start index.js --name chatbot
+      
+                  # Logging completion of script execution
+                  echo "Script execution completed successfully."
