@@ -34,7 +34,7 @@ jobs:
           script: |
             # Logging start of script execution
             # echo "Starting script execution..."
-          
+            cd bahja-isaac-nas-discord-chatbot
 
           
             #       # Navigate to the directory
