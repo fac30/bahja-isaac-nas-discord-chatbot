@@ -33,17 +33,17 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           script: |
             # Logging start of script execution
-            echo "Starting script execution..."
+            # echo "Starting script execution..."
           
 
           
-                  # Navigate to the directory
-                  if [ -d "bahja-isaac-nas-discord-chatbot" ]; then
-                    cd bahja-isaac-nas-discord-chatbot || exit 1
-                  else
-                    echo "Error: Directory 'bahja-isaac-nas-discord-chatbot' not found."
-                    exit 1
-                  fi
+            #       # Navigate to the directory
+            #       if [ -d "bahja-isaac-nas-discord-chatbot" ]; then
+            #         cd bahja-isaac-nas-discord-chatbot || exit 1
+            #       else
+            #         echo "Error: Directory 'bahja-isaac-nas-discord-chatbot' not found."
+            #         exit 1
+            #       fi
       
                   # Pull latest changes from Git
                   git pull
