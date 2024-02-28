@@ -17,7 +17,7 @@ jobs:
           PASSWORD: ${{ secrets.PASSWORD }}
           script: |
           
-            cd bahja-isaac-nas-discord-chatbot
+            cd bahja-isaac-nas-discord-chatbot/bahja-isaac-nas-discord-chatbot
             git pull
             npm install
             pm2 stop index.js
