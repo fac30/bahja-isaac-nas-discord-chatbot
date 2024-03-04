@@ -38,6 +38,17 @@ To install this project on your local machine please follow these steps:
   ```
 
 ## How to use the project
+
+Prior to using the Bot you have the option to run the tests in the programme to verify it is working as expected, enter the following in the terminal:
+```sh
+  node test
+```
+
+The expected results should be as follows:
+
+<img src="./assets/test-results.png">
+
+
 Once the server is running please interact with the Bot via the text field of the server.
 
 ## Credits
