@@ -3,7 +3,7 @@
 
 
 ## Description
-This project was developed as part of the FAC - FAC30A (Founders and Coders) curriculum. The aim of the project was to create a Discord Chat Bot with OpenAI inregrated with the server.
+This project was developed as part of the FAC - FAC30A (Founders and Coders) curriculum. The aim of the project was to create a Discord Chat Bot with OpenAI integrated with the server.
 
 The project is built using JavaScript, Node/Nodemon, Discord.js, OpenAI and Jest as a testing library, reflecting FAC's commitment to foundational technologies. Despite facing challenges, such as a change in personnel during development, the team successfully navigated through obstacles.
 
